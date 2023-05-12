@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="https://eip.kehakiman.gov.my/services/"
+           targetNamespace="https://eip.kehakiman.gov.my/services/" elementFormDefault="qualified">
+
+    <xs:element name="submitApplicationRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="data" type="tns:info" />
+                <xs:element name="source" type="xs:string" />
+                <xs:element name="transactionID" type="xs:string" />
+                <xs:element name="username" type="xs:string" />
+                <xs:element name="password" type="xs:string" />
+                <xs:element name="eventName" type="xs:string" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="submitApplicationResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="data" type="tns:info" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="info">
+        <xs:sequence>
+            <xs:element name="petitionNo" type="xs:string" />
+            <xs:element name="dName" type="xs:string" />
+            <xs:element name="dNameOther" type="xs:string" />
+            <xs:element name="dOldIC" type="xs:string" />
+            <xs:element name="dOtherIDType" type="xs:string" />
+            <xs:element name="dOtherID" type="xs:string" />
+            <xs:element name="dDeathCertNo" type="xs:string" />
+            <xs:element name="dDate" type="xs:string" />
+            <xs:element name="cardType" type="xs:string" />
+            <xs:element name="applicationType" type="xs:string" />
+            <xs:element name="applicationDate" type="xs:string" />
+            <xs:element name="applicantName" type="xs:string" />
+            <xs:element name="applicantIC" type="xs:string" />
+            <xs:element name="applicantRelationship" type="xs:string" />
+            <xs:element name="applicantRelOther" type="xs:string" />
+            <xs:element name="officeName" type="xs:string" />
+            <xs:element name="docContent" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
